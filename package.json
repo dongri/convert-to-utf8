@@ -1,7 +1,7 @@
 {
   "name": "convert-to-utf8",
   "main": "./lib/convert-to-utf8",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ConvertToUTF8 package for editing and saving files encoded in Shift_JIS, etc",
   "activationEvents": [
     "convert-to-utf8:open_shift_jis",
