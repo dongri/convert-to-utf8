@@ -1,5 +1,9 @@
-# convert-to-utf8 package
+# ConvertToUTF8
 
 ConvertToUTF8 package for editing and saving files encoded in Shift_JIS, etc.
 
-![A screenshot of your spankin' package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+![A screenshot of your spankin' package](https://dl.dropboxusercontent.com/u/358152/github/convert-to-utf8/convert-to-utf8-1.png)
+
+![A screenshot of your spankin' package](https://dl.dropboxusercontent.com/u/358152/github/convert-to-utf8/convert-to-utf8-2.png)
+
+
