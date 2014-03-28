@@ -1,0 +1,17 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+# 'context-menu':
+#   '.overlayer':
+#       'Enable convert-to-utf8': 'convert-to-utf8:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'ConvertToUTF8'
+      'submenu': [
+        { 'label': 'Open With Shift-JIS', 'command': 'convert-to-utf8:open_shift_jis' }
+        { 'label': 'Save To Shift-JIS',   'command': 'convert-to-utf8:save_shift_jis' }
+      ]
+    ]
+  }
+]
