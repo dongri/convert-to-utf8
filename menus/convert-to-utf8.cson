@@ -9,8 +9,15 @@
     'submenu': [
       'label': 'ConvertToUTF8'
       'submenu': [
-        { 'label': 'Open With Shift-JIS', 'command': 'convert-to-utf8:open_shift_jis' }
-        { 'label': 'Save To Shift-JIS',   'command': 'convert-to-utf8:save_shift_jis' }
+        { 'label': 'Japanese (Shift_JIS)',             'command': 'convert-to-utf8:shift_jis'  }
+        { 'label': 'Japanese (EUC-JP)',                'command': 'convert-to-utf8:euc-jp'     }
+        { 'label': 'Japanese (CP932)',                 'command': 'convert-to-utf8:cp932'      }
+        { 'label': 'Chinese Simplified (GBK)',         'command': 'convert-to-utf8:gbk'        }
+        { 'label': 'Chinese Traditional (Big5)',       'command': 'convert-to-utf8:big5'       }
+        { 'label': 'Chinese Traditional (Big5-HKSCS)', 'command': 'convert-to-utf8:big5-hkscs' }
+        { 'label': 'Korean (EUC-KR)',                  'command': 'convert-to-utf8:euc-kr'     }
+        { 'label': '--------------------------------', 'command': ''                          }
+        { 'label': 'UTF-8',                            'command': 'convert-to-utf8:utf-8'      }
       ]
     ]
   }

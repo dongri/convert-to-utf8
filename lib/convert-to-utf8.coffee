@@ -1,11 +1,17 @@
 fs    = require 'fs'
-jconv = require 'jconv'
+iconv = require 'iconv-lite'
 
 module.exports =
 
   activate: (state) ->
-    atom.workspaceView.command "convert-to-utf8:open_shift_jis", => @open_shift_jis()
-    atom.workspaceView.command "convert-to-utf8:save_shift_jis", => @save_shift_jis()
+    atom.workspaceView.command "convert-to-utf8:shift_jis", =>  @open 'shift_jis'
+    atom.workspaceView.command "convert-to-utf8:euc-jp", =>     @open 'euc-jp'
+    atom.workspaceView.command "convert-to-utf8:cp932", =>      @open 'cp932'
+    atom.workspaceView.command "convert-to-utf8:gbk", =>        @open 'gbk'
+    atom.workspaceView.command "convert-to-utf8:big5", =>       @open 'big5'
+    atom.workspaceView.command "convert-to-utf8:big5-hkscs", => @open 'big5-hkscs'
+    atom.workspaceView.command "convert-to-utf8:euc-kr", =>     @open 'euc-kr'
+    atom.workspaceView.command "convert-to-utf8:utf-8", =>      @open 'utf-8'
 
   deactivate: ->
     #@convertToUtf8View.destroy()
@@ -13,19 +19,18 @@ module.exports =
   serialize: ->
     #convertToUtf8ViewState: @convertToUtf8View.serialize()
 
-  open_shift_jis: ->
+  open: (encoding) ->
     editor = atom.workspace.getActiveEditor()
     uri = editor.getUri()
     buffer = fs.readFileSync(uri)
-    text = jconv.convert( buffer, 'SJIS', 'UTF8' )
-    convertedText = text.toString('UTF8')
-    atom.workspace.getActiveEditor().setText(convertedText)
-    atom.workspace.saveActivePaneItem()
+    convertedText = iconv.decode buffer, encoding
+    editor.setText convertedText
+    # atom.workspace.saveActivePaneItem()
 
-  save_shift_jis: ->
+  save: (encoding) ->
     editor = atom.workspace.getActiveEditor()
     uri = editor.getUri()
     buffer = fs.readFileSync(uri)
-    text = jconv.convert( buffer, 'UTF8', 'SJIS' )
-    convertedText = text.toString('BINARY');
-    fs.writeFileSync( uri, text )
+    data = buffer.toString 'UTF8'
+    buf = iconv.encode data, encoding
+    fs.writeFileSync( uri, buf )
