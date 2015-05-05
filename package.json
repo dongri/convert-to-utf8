@@ -1,7 +1,7 @@
 {
   "name": "convert-to-utf8",
   "main": "./lib/convert-to-utf8",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "ConvertToUTF8 package for editing and saving files encoded in Shift_JIS, EUC-JP, CP932, GBK, BIG5, BIG5-HKSCS, EUC-KR etc",
   "activationCommands": {
     "atom-workspace": [
