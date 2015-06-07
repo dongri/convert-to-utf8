@@ -22,8 +22,8 @@ module.exports =
   open: (encoding) ->
     workspace = atom.workspace
     editor = workspace.getActiveTextEditor()
-    uri = editor.getUri()
-    buffer = fs.readFileSync(uri)
+    path = editor.getPath()
+    buffer = fs.readFileSync(path)
     convertedText = iconv.decode buffer, encoding
     editor.setText convertedText
     # atom.workspace.saveActivePaneItem()
@@ -31,8 +31,8 @@ module.exports =
   save: (encoding) ->
     workspace = atom.workspace
     editor = workspace.getActiveTextEditor()
-    uri = editor.getUri()
-    buffer = fs.readFileSync(uri)
+    path = editor.getPath()
+    buffer = fs.readFileSync(path)
     data = buffer.toString 'UTF8'
     buf = iconv.encode data, encoding
     fs.writeFileSync( uri, buf )
