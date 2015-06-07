@@ -20,7 +20,7 @@ module.exports =
     #convertToUtf8ViewState: @convertToUtf8View.serialize()
 
   open: (encoding) ->
-    editor = atom.workspace.getActiveEditor()
+    editor = atom.workspaceView.getActiveEditor()
     uri = editor.getUri()
     buffer = fs.readFileSync(uri)
     convertedText = iconv.decode buffer, encoding
@@ -28,7 +28,7 @@ module.exports =
     # atom.workspace.saveActivePaneItem()
 
   save: (encoding) ->
-    editor = atom.workspace.getActiveEditor()
+    editor = atom.workspaceView.getActiveEditor()
     uri = editor.getUri()
     buffer = fs.readFileSync(uri)
     data = buffer.toString 'UTF8'
