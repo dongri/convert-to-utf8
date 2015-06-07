@@ -4,14 +4,14 @@ iconv = require 'iconv-lite'
 module.exports =
 
   activate: (state) ->
-    atom.workspaceView.command "convert-to-utf8:shift_jis", =>  @open 'shift_jis'
-    atom.workspaceView.command "convert-to-utf8:euc-jp", =>     @open 'euc-jp'
-    atom.workspaceView.command "convert-to-utf8:cp932", =>      @open 'cp932'
-    atom.workspaceView.command "convert-to-utf8:gbk", =>        @open 'gbk'
-    atom.workspaceView.command "convert-to-utf8:big5", =>       @open 'big5'
-    atom.workspaceView.command "convert-to-utf8:big5-hkscs", => @open 'big5-hkscs'
-    atom.workspaceView.command "convert-to-utf8:euc-kr", =>     @open 'euc-kr'
-    atom.workspaceView.command "convert-to-utf8:utf-8", =>      @open 'utf-8'
+    atom.commands.add 'atom-workspace', "convert-to-utf8:shift_jis", =>  @open 'shift_jis'
+    atom.commands.add 'atom-workspace', "convert-to-utf8:euc-jp", =>     @open 'euc-jp'
+    atom.commands.add 'atom-workspace', "convert-to-utf8:cp932", =>      @open 'cp932'
+    atom.commands.add 'atom-workspace', "convert-to-utf8:gbk", =>        @open 'gbk'
+    atom.commands.add 'atom-workspace', "convert-to-utf8:big5", =>       @open 'big5'
+    atom.commands.add 'atom-workspace', "convert-to-utf8:big5-hkscs", => @open 'big5-hkscs'
+    atom.commands.add 'atom-workspace', "convert-to-utf8:euc-kr", =>     @open 'euc-kr'
+    atom.commands.add 'atom-workspace', "convert-to-utf8:utf-8", =>      @open 'utf-8'
 
   deactivate: ->
     #@convertToUtf8View.destroy()
