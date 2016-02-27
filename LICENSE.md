@@ -1,4 +1,4 @@
-Copyright (c) 2014 Dongri <dongirat@gmail.com>
+Copyright (c) 2016 de2p-shikataro <w.shikanai@de2p.co.jp>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

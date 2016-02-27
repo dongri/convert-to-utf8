@@ -1,0 +1,18 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+# 'context-menu':
+#   '.overlayer':
+#       'Enable convert-to-sjis': 'convert-to-sjis:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'ConvertToSJIS'
+      'submenu': [
+        { 'label': 'UTF-8',                            'command': 'convert-to-sjis:utf-8'      }
+        { 'label': '--------------------------------', 'command': ''                          }
+        { 'label': 'Japanese (Shift_JIS)',             'command': 'convert-to-sjis:shift_jis'  }
+      ]
+    ]
+  }
+]
