@@ -9,4 +9,4 @@
 # https://atom.io/docs/latest/advanced/keymaps
 
 # '.workspace':
-#   'ctrl-alt-o': 'convert-to-utf8:toggle'
+#   'ctrl-alt-s': 'convert-to-sjis:toggle'
