@@ -8,10 +8,10 @@ module.exports =
     atom.commands.add 'atom-workspace', "convert-to-sjis:utf-8", =>      @open 'utf-8'
 
   deactivate: ->
-    #@convertToUtf8View.destroy()
+    #@convertToSjisView.destroy()
 
   serialize: ->
-    #convertToUtf8ViewState: @convertToUtf8View.serialize()
+    #convertToSjisViewState: @convertToSjisView.serialize()
 
   open: (encoding) ->
     workspace = atom.workspace
